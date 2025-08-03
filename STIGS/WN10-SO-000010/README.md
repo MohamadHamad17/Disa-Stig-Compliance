@@ -62,4 +62,4 @@ Following execution of the PowerShell remediation script, the Guest account was 
 ✅ Proudly remediated as part of hands-on STIG hardening practice.  
 _Security isn’t a one-time fix — it’s a habit._
 
-####Please find the remediation script in this folder within the repository
+Please find the remediation script in this folder within the repository
