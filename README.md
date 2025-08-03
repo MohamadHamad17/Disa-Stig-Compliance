@@ -1,8 +1,9 @@
 # Disa-Stig-Compliance
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MohamadHamad17/Disa-Stig-Compliance/main/path-to-your-image.png" alt="DISA STIG Banner" width="500"/>
+  <img width="550" height="452" alt="Screenshot 2025-08-03 at 12 47 08 PM" src="https://github.com/user-attachments/assets/802ffd0e-70f5-4fac-90b7-d28e0c106752" />
 </p>
+
 
 A repository for automating and tracking **DISA STIG** (Security Technical Implementation Guide) compliance on **Windows 10 systems**. This project focuses on identifying failed STIGs, remediating them using PowerShell, and verifying success using tools like Tenable.io.
 
