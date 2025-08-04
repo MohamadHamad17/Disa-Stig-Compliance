@@ -69,3 +69,16 @@ Open Command Prompt (Admin) and run:
 gpupdate /force
 ```
 This refreshes policies without waiting for the next background update.
+
+## ❌ Before Remediation
+
+<img width="1434" height="584" alt="Screenshot 2025-08-04 at 12 48 57 PM" src="https://github.com/user-attachments/assets/7544abee-2ea8-45fb-8eb7-30375506aff5" />
+
+---
+
+## ✅ After Remediation
+
+<img width="1434" height="584" alt="Screenshot 2025-08-04 at 12 51 50 PM" src="https://github.com/user-attachments/assets/d2024a79-be4e-4364-882e-f2a002875906" />
+
+---
+
