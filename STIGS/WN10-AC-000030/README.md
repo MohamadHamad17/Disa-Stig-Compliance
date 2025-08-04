@@ -1,12 +1,12 @@
-# WN10-AC-000005 — The Minimum Password Age must be configured to at least 1 day
+# WN10-AC-000030 — The Minimum Password Age must be configured to at least 1 day
 
-This documentation outlines the process of identifying, remediating, and validating STIG ID `WN10-AC-000005`, which requires that the **Minimum Password Age** be set to **at least 1 day** to ensure password history enforcement cannot be bypassed by rapid cycling.
+This documentation outlines the process of identifying, remediating, and validating STIG ID `WN10-AC-000030`, which requires that the **Minimum Password Age** be set to **at least 1 day** to ensure password history enforcement cannot be bypassed by rapid cycling.
 
 ---
 
 ## 📋 STIG Overview
 
-- **STIG ID**: WN10-AC-000005  
+- **STIG ID**: WN10-AC-000030 
 - **Category**: Password Policy  
 - **Requirement**: Minimum Password Age must be set to at least 1 day  
 - **Severity**: Medium  
@@ -43,7 +43,8 @@ Minimum password age
 
 ## 🛡️ Tenable Scan After Remediation in Place
 
-![Tenable Pass Screenshot](https://github.com/user-attachments/assets/example-tenable-pass.png)
+<img width="1436" height="611" alt="Screenshot 2025-08-04 at 6 50 17 PM" src="https://github.com/user-attachments/assets/452f654b-ba01-4001-aef6-ed462937753f" />
+
 
 ---
 
@@ -51,14 +52,15 @@ Minimum password age
 
 ### ❌ Before Remediation (STIG Failed)
 
-![STIG Fail Screenshot](https://github.com/user-attachments/assets/example-tenable-fail.png)
+
+
+<img width="1436" height="611" alt="Screenshot 2025-08-04 at 6 52 04 PM" src="https://github.com/user-attachments/assets/0282274c-4c1e-4ba3-bd4b-320670b962e4" />
 
 ---
 
 ### ✅ After Remediation (STIG Passed)
 
-![STIG Pass Screenshot](https://github.com/user-attachments/assets/example-tenable-pass.png)
-
+<img width="1436" height="611" alt="Screenshot 2025-08-04 at 6 50 17 PM" src="https://github.com/user-attachments/assets/452f654b-ba01-4001-aef6-ed462937753f" />
 ---
 
 ✅ Proudly remediated as part of hands-on STIG hardening practice.  
