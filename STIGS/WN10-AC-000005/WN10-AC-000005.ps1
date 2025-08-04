@@ -1,7 +1,8 @@
 <#
 .SYNOPSIS
     This PowerShell script sets the Windows Application event log size to a minimum of 32768 KB (32 MB) to meet security requirements.
-
+    
+    IMPORTANT: SCRIPT MUST BE RAN WITH ELEVATED PRIVILEGES
 
 .NOTES
     Author          : Mohamad Hamad
