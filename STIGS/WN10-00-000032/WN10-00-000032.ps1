@@ -1,3 +1,29 @@
+<#
+.SYNOPSIS
+    Ensures that BitLocker is configured to require a startup PIN of **at least six characters** (STIG ID WN10-00-000032).
+
+.NOTES
+    Author          : Mohamad Hamad
+    LinkedIn        : https://linkedin.com/in/mohamad-hamad-428a15318
+    GitHub          : https://github.com/MohamadHamad17
+    Date Created    : 2025-08-04
+    Last Modified   : 2025-08-04
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-00-000032
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Example:
+    PS C:\> .\WN10-00-000032.ps1
+#>
+
 # PowerShell Script to enforce Group Policy equivalent of:
 # "Configure minimum PIN length for startup" for BitLocker
 
