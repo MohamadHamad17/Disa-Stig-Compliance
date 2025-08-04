@@ -1,26 +1,29 @@
 <#
 .SYNOPSIS
-    Remediates STIG ID WN10-AC-000005 by configuring Account Lockout Policy:
-    - Sets Account lockout duration to 15 minutes (or greater).
-    - Sets Account lockout threshold to 5 invalid attempts.
-    - Sets Reset account lockout counter after 15 minutes.
+    This PowerShell script sets the Windows Application event log size to a minimum of 32768 KB (32 MB) to meet security requirements.
 
-.DESCRIPTION
-    Uses `secedit` to securely apply local security policy changes.
-    Ensures compliance with STIG WN10-AC-000005, which requires that locked accounts remain inaccessible for at least 15 minutes.
 
 .NOTES
     Author          : Mohamad Hamad
-    Date Created    : 2025-08-04
+    LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
+    GitHub          : github.com/MohamadHamad17
+    Date Created    : 2025-08-03
+    Last Modified   : 2028-08-03
     Version         : 1.0
-    STIG ID         : WN10-AC-000005
-    Remediation Type: Local Security Policy (secedit)
-    Platform        : Windows 10 / 11
-    PowerShell Ver. : 5.1+
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-AU-000500
 
-.EXAMPLE
-    PS C:\> .\WN10-AC-000005.ps1
-    Applies Account Lockout Policy settings and forces Group Policy update.
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> STIG-ID-WN10-AC-000005.ps1 
 #>
 
 # Ensure script is run as Administrator
