@@ -33,3 +33,9 @@ The control mandates that Windows enforce a lockout period of **15 minutes or mo
 
 <img width="1434" height="634" alt="Screenshot 2025-08-04 at 3 07 40 PM" src="https://github.com/user-attachments/assets/697f8966-f38c-4195-a66c-302d5d45709c" />
 
+---
+
+✅ Proudly remediated as part of hands-on STIG hardening practice.  
+_Security isn’t a one-time fix — it’s a habit._
+
+Please find the remediation script in this folder within the repository.
