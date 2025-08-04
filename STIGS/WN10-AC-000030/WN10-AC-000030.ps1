@@ -1,8 +1,30 @@
 <#
 .SYNOPSIS
-    Remediates the DISA STIG finding by setting the "Minimum Password Age" to 1 day.
-.DESCRIPTION
-    Prevents users from cycling through password history by requiring a 1-day minimum before password changes.
+This PowerShell script sets the Minimum Password Age to at least 1 day to comply with DISA STIG requirements and prevent password history cycling.
+    
+    IMPORTANT: SCRIPT MUST BE RAN WITH ELEVATED PRIVILEGES
+
+.NOTES
+    Author          : Mohamad Hamad
+    LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
+    GitHub          : github.com/MohamadHamad17
+    Date Created    : 2025-08-04
+    Last Modified   : 2028-08-04
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-AU-000500
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> STIG-ID-WN10-AC-000030.ps1 
 #>
 
 # Set the Minimum Password Age to 1 day
