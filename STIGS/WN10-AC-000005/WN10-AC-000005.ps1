@@ -32,38 +32,14 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit 1
 }
 
-# Define paths
-$backupPath = "$env:SystemDrive\SecurityPolicyBackup.inf"
-$tempPolicyPath = "$env:SystemDrive\Temp_AccountLockoutPolicy.inf"
-$dbPath = "$env:SystemRoot\Security\Database\SecEdit.sdb"
+# Ensure we’re elevated
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Error "Please run this script as Administrator."
+    exit 1
+}
 
-# Backup current policy
-Write-Host "Backing up current security policy to: $backupPath"
-secedit /export /cfg $backupPath /quiet
+# Set the account lockout duration to 15 minutes
+net accounts /lockoutduration:15
 
-# Define compliant policy settings
-$policyContent = @"
-[System Access]
-LockoutBadCount = 5
-LockoutDuration = 15
-ResetLockoutCount = 15
-"@
-
-# Write new policy to temp file
-$policyContent | Out-File -Encoding ASCII -FilePath $tempPolicyPath -Force
-Write-Host "Temporary policy written to: $tempPolicyPath"
-
-# Apply the updated policy
-Write-Host "Applying Account Lockout Policy settings..."
-secedit /configure /db $dbPath /cfg $tempPolicyPath /quiet
-
-# Clean up temporary file
-Remove-Item $tempPolicyPath -Force
-Write-Host "Removed temporary file: $tempPolicyPath"
-
-# Force Group Policy update
-Write-Host "Running gpupdate to apply settings..."
-Start-Process -FilePath "cmd.exe" -ArgumentList "/c gpupdate /force" -Verb RunAs -WindowStyle Hidden
-
-Write-Host "STIG WN10-AC-000005 remediation complete. Account Lockout Policy is now compliant."
+Write-Host "✔ Account lockout duration set to 15 minutes."
 
