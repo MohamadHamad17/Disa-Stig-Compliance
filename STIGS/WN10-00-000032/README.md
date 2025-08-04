@@ -44,6 +44,8 @@ Computer Configuration
                 └── Configure minimum PIN length for startup
 ```
 
+<img width="1434" height="738" alt="Screenshot 2025-08-04 at 12 46 23 PM" src="https://github.com/user-attachments/assets/983c1c63-c04e-415b-be82-f27e3c8c0ec5" />
+
 ### 🛠️ Step-by-Step Instructions
 
 1. **Open Local Group Policy Editor**  
