@@ -2,6 +2,8 @@
 .SYNOPSIS
     This PowerShell script configures the minimum password length policy to 14 characters 
 
+     Ensure the script is being run with administrative privileges
+
 .NOTES
     Author          : Mohamad Hamad
     LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
