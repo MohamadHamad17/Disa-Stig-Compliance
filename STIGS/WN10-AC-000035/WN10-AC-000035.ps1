@@ -1,3 +1,29 @@
+<#
+.SYNOPSIS
+    This PowerShell script configures the minimum password length policy to 14 characters 
+
+.NOTES
+    Author          : Mohamad Hamad
+    LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
+    GitHub          : github.com/MohamadHamad17
+    Date Created    : 2025-08-05
+    Last Modified   : 2028-08-05
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-AC-000035
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> STIG-ID-WN10-AC-000035.ps1 
+#>
 
 # Ensure the script is being run with administrative privileges
 If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
@@ -15,8 +41,8 @@ try {
         Set-Content "$env:temp\secpol_updated.cfg"
     secedit /configure /db secedit.sdb /cfg "$env:temp\secpol_updated.cfg" /quiet
 
-    Write-Output "✅ Minimum password length successfully configured to 14 characters."
+    Write-Output "Minimum password length successfully configured to 14 characters."
 }
 catch {
-    Write-Error "❌ An error occurred: $_"
+    Write-Error "An error occurred: $_"
 }
