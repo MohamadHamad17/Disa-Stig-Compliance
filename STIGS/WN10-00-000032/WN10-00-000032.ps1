@@ -22,6 +22,8 @@
     PS C:\> .\Set-MinimumPIN.ps1
 #>
 
+Windows 10 systems must use a BitLocker PIN with a minimum length of six digits for pre-boot authentication.
+
 # Requires Administrator privileges
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole('Administrators')) {
     Write-Warning "Run PowerShell as Administrator."
