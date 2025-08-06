@@ -1,28 +1,32 @@
 <#
 .SYNOPSIS
-    Ensures the registry value “MinimumPIN” (REG_DWORD) under
-    HKLM:\SOFTWARE\Policies\Microsoft\FVE is set to 6 or greater,
-    as required by STIG ID WN10-00-000032.
-
-.DESCRIPTION
-    - Creates the key if it does not exist.
-    - Reads the current value.
-    - If the value is missing or less than 6, sets it to 6.
-    - Logs the action to the console.
+    Windows 10 systems must use a BitLocker PIN with a minimum length of six digits for pre-boot authentication.
+    
+    IMPORTANT: SCRIPT MUST BE RAN WITH ELEVATED PRIVILEGES
 
 .NOTES
-    Author      : Mohamad Hamad
-    Date        : 2025-08-04
-    Version     : 1.0
-    STIG-ID     : WN10-00-000032
-    Registry Key: HKLM\SOFTWARE\Policies\Microsoft\FVE
-    Value Name  : MinimumPIN (REG_DWORD)
+    Author          : Mohamad Hamad
+    LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
+    GitHub          : github.com/MohamadHamad17
+    Date Created    : 2025-08-04
+    Last Modified   : 2028-08-04
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-00-000032
 
-.EXAMPLE
-    PS C:\> .\Set-MinimumPIN.ps1
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> STIG-ID-WN10-00-000032.ps1 
 #>
 
-Windows 10 systems must use a BitLocker PIN with a minimum length of six digits for pre-boot authentication.
 
 # Requires Administrator privileges
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole('Administrators')) {
