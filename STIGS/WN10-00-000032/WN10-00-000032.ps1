@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Windows 10 systems must use a BitLocker PIN with a minimum length of six digits for pre-boot authentication.
+    This Powershell script ensures Windows 10 systems must use a BitLocker PIN with a minimum length of six digits for pre-boot authentication.
     
     IMPORTANT: SCRIPT MUST BE RAN WITH ELEVATED PRIVILEGES
 
