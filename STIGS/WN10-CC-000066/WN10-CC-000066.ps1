@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Command line data must be included in process creation events.
+    This script enables command line data in process creation events for better audit logging.
 
 .NOTES
     Author          : Mohamad Hamad
