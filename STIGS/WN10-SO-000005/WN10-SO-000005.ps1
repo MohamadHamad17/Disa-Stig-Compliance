@@ -8,7 +8,7 @@
     GitHub          : github.com/MohamadHamad17
     Date Created    : 2025-08-07
     Last Modified   : 2028-08-07
-    Version         : 1.0
+    Version         : 1.1
     CVEs            : N/A
     Plugin IDs      : N/A
     STIG-ID         : WN10-SO-000005
@@ -20,9 +20,9 @@
     PowerShell Ver. : 
 
 .USAGE
-    Put any usage instructions here.
-    Example syntax:
-    PS C:\> STIG-ID-WN10-SO-000005.ps1 
+    Run this script as Administrator.
+    Example:
+    PS C:\> .\STIG-ID-WN10-SO-000005.ps1
 #>
 
 # Ensure administrator privileges
@@ -32,11 +32,17 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit 1
 }
 
-try {
-    # Disable the built-in Administrator account
-    Disable-LocalUser -Name "Administrator"
-    Write-Output "The built-in Administrator account has been disabled."
-} catch {
-    Write-Error "Failed to disable the Administrator account: $_"
+# Find the built-in Administrator account (SID ending in -500)
+$adminUser = Get-LocalUser | Where-Object { $_.SID.Value -like '*-500' }
+
+if ($adminUser) {
+    try {
+        Disable-LocalUser -Name $adminUser.Name
+        Write-Output "Built-in Administrator account '$($adminUser.Name)' has been disabled."
+    } catch {
+        Write-Error "Failed to disable account '$($adminUser.Name)': $_"
+    }
+} else {
+    Write-Warning "Could not find the built-in Administrator account (SID -500)."
 }
 
