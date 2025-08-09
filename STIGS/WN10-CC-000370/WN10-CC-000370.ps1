@@ -1,3 +1,30 @@
+<#
+.SYNOPSIS
+    This script disables convenience PIN sign-in to prevent domain users from using a PIN to log in.
+
+.NOTES
+    Author          : Mohamad Hamad
+    LinkedIn        : linkedin.com/in/mohamad-hamad-428a15318/
+    GitHub          : github.com/MohamadHamad17
+    Date Created    : 2025-08-08
+    Last Modified   : 2028-08-08
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-CC-000370
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> STIG-ID-WN10-CC-000370.ps1 
+#>
+
 # WN10-CC-000370: Disable convenience PIN sign-in (AllowDomainPINLogon = 0)
 # Run as Administrator
 
